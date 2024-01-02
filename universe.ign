@@ -1,0 +1,40 @@
+{
+  "ignition": {
+    "version": "3.4.0"
+  },
+  "kernelArguments": {
+    "shouldExist": [
+      "hardened_usercopy=1",
+      "init_on_alloc=1",
+      "init_on_free=1",
+      "mitigations=auto,nosmt"
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "compression": "",
+          "source": "data:,universe"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/systemd/zram-generator.conf",
+        "contents": {
+          "compression": "",
+          "source": "data:,%23%20This%20config%20file%20enables%20a%20%2Fdev%2Fzram0%20device%20with%20the%20default%20settings%0A%5Bzram0%5D%0Acompression-algorithm%3Dzstd%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/sysctl.d/90-sysrq.conf",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/2xVQXPbPA69+1e8TQ6NZ1xt2z3n4Dpp17ttk4ndme87aWAKslhTpIag7Ki//htQclJ3eorMEMDDew/gNT6z50gOkU1oW/YVJRs86hDxU1KFn5Fa7NhQL4xQo7H7Bo4SezPMjm3R0Z7fGtdL4ohbvJvNrvF/jp4dNuxqPMaQ2OSclyVkdo1tHJACDswdDmMQVVVkEfBzF6SPLAh90sJHijb0gn93MRjU1rHg5kDOydDKAm2oeseyACczL3CzbTgyrMAHrB6+fVp/zj2lhmEa8nvr9/mH9TZZcjiS67mYY10jhpBAOwmuT+wGeOZKxguCOoZ2xLCAUpKPcfX+qpiNHRSHLsUysqRoTcItPsyusTwGW51bbLkNcfhDp0dLqFqWPW5SY6eSMORBTgJ2DOGE3TA1VG7uV9+f1tu/y7uv95vP5dP9Zvu0Xm3nL1Bysl+xvJ9d46ML5gAf/NveVm/foYuhtk75uBk7raykGNBRMs0CITUcT1YYGZOVTJtQyyDB1S0+XM3P9TqOdclH9qnsKJLXpm/xH1W6jx6hrnHgZzYL6CXYGja9Eex66xKsf6VQL5UuUFVWVmjnuJrAf6UDQ9nKKPi5Y5O4QsU19ZpDwH68n8L0ibp3DsvNlydYr5rFTsjwS7FIvgqt/cnlkUrpyPAk2kgUOYfH7dNydV8ut9vl6r+FemQIffYFuhQ1IgWcQjwsFJYHZbmVYvKGJYV4vkfGqOYpIPbeK+lqJRZhAflKw22EiVyxV1/KIh//2WkDtVSMiUsxoeOJ7LuRM3wXjvhGLeeuNJXAJoSOvaDvQHAU9wxKicxBaa2nXnrfRXu0jveci0cpZvqnaOm51I/Sv6TNU/9aNKUBznpWGxnb5U/qU1A1s8mE+WzgL3frzapcft8+fHlY3s2LWcXHIqWhcBpcnsN+q7BdP6w22zVOjTWNSt7LqLf1P9gkHHjoYqY07wErOFnnFmjCiY8cF9hFpgPERGbdSlRpf/PX4rwnM5TJBiPJTsVfDHxBDX98/DRp+qLKrxfKXVf/buExk4eG/m+9RUOxYrXCQgdCba2nr04uZp5TYULkQrP9sKkcQyabnmlRWfIU1FVedRdAX1xW6NK+gPhr3CXRjw+b9V+QoXXWH7IPtXD+YUL0HGFIjZsaSnBMWQQXkui+zht6kMQtTPB1L/oEjE6TYlZL0Y0vA1flVEEyQRf/OdeTibtLZBcgTjY1OjiU1GXj+6CQa1sHQe9dnrtGfRnZJN3A4aThre459cqqYXPQyY55ltV58q9LPGMy5f3iOPK+dxQnQS531Hk1TQqg6tuOdtbZNKjIutFvXndApjI/UFm0SSQBRfZv0hTseJ4ZlN5W5fkoa/dPAAAA///o0Uu50AcAAA=="
+        }
+      }
+    ]
+  }
+}
